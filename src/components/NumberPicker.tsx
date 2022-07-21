@@ -7,11 +7,11 @@ export default function NumberPicker(): JSX.Element {
     useState(0);
 
   const handleAddOneToCounter = () => {
-    queueRerenderWithNewCounterValue(counterValueFromCurrentRender + 1);
+    queueRerenderWithNewCounterValue(counterValueFromCurrentRender => counterValueFromCurrentRender + 1);
   };
 
   const handleSubtractOneFromCounter = () => {
-    queueRerenderWithNewCounterValue(counterValueFromCurrentRender - 1);
+    queueRerenderWithNewCounterValue(counterValueFromCurrentRender => counterValueFromCurrentRender -1);
   };
 
   const handleStoreCurrentCount = () => {
